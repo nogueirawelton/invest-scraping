@@ -33,11 +33,9 @@ export function RankingProvider({
   }
 
   useEffect(() => {
-    axios
-      .get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/fii/ranking/${current}`)
-      .then((response) => {
-        setRanking(response.data.rankingRows);
-      });
+    axios.get(`/api/fii/ranking/${current}`).then((response) => {
+      setRanking(response.data.rankingRows);
+    });
   }, [current]);
   return (
     <rankingContext.Provider

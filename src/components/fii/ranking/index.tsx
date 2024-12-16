@@ -3,9 +3,7 @@ import { Skeleton } from "../../ui/skeleton";
 import { RankingTable } from "./ranking-table";
 
 export async function Ranking() {
-  const allFiis: Array<FII> = await (
-    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/fii/ranking`)
-  ).json();
+  const allFiis: Array<FII> = await (await fetch("/api/fii/ranking")).json();
 
   return (
     <div className="flex-1 overflow-hidden flex flex-col">
