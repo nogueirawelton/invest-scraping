@@ -1,6 +1,5 @@
-import { Ranking, RankingFallback } from "@/components/fii/ranking";
+import { Ranking } from "@/components/fii/ranking";
 import { Box } from "@/components/global/box";
-import { Suspense } from "react";
 
 import {
   ResizableHandle,
@@ -26,9 +25,7 @@ export default function Fiis() {
         className="flex-1 flex flex-col"
       >
         <Box className="overflow-hidden">
-          <Suspense fallback={<RankingFallback />}>
-            <Ranking />
-          </Suspense>
+          <Ranking />
         </Box>
       </ResizablePanel>
     </ResizablePanelGroup>
